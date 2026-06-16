@@ -1,0 +1,72 @@
+{
+  "name": "softgeng/paystack-php",
+  "description": "A PHP SDK for the Paystack API with optional Laravel integration.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Okwukwe Ewurum",
+      "email": "okwukwe.ewurum@gmail.com"
+    }
+  ],
+  "keywords": [
+    "paystack",
+    "payments",
+    "php",
+    "laravel",
+    "sdk"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Softgeng\\Paystack\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Softgeng\\Paystack\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "illuminate/http": "^10.0|^11.0|^12.0",
+    "illuminate/support": "^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.6",
+    "pestphp/pest": "^3.0",
+    "phpstan/phpstan": "^1.10|^2.0",
+    "rector/rector": "^2.4",
+    "laravel/pint": "^1.29"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Softgeng\\Paystack\\Laravel\\PaystackServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "@php vendor/bin/pest --colors=always",
+    "test:coverage": "@php vendor/bin/pest --coverage --colors=always",
+    "refactor": "rector process",
+    "test:refactor": "rector process --dry-run",
+    "lint": "pint",
+    "test:lint": "pint --test",
+    "test:analyse": "phpstan analyse --ansi",
+    "codecheck": [
+      "@test:refactor",
+      "@test:lint",
+      "@test:analyse",
+      "@test"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
