@@ -1,5 +1,8 @@
 # Paystack PHP SDK
 
+[![Tests](https://github.com/eokwukwe/paystack-php/actions/workflows/tests.yml/badge.svg)](https://github.com/eokwukwe/paystack-php/actions/workflows/tests.yml) 
+[![codecov](https://codecov.io/github/eokwukwe/paystack-php/graph/badge.svg?token=5CQ0SFDI19)](https://codecov.io/github/eokwukwe/paystack-php)
+
 A PHP 8.2+ SDK for the current Paystack API Reference, with optional Laravel integration.
 
 This package intentionally tracks the current Paystack API docs only. Legacy aliases and helper APIs that are not present in the current API Reference are not exposed.
