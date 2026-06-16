@@ -21,8 +21,10 @@ Paystack's API Reference remains the source of truth for endpoint fields and bus
 ## Requirements
 
 - PHP `^8.2`
-- `illuminate/http` `^10.0|^11.0|^12.0`
-- `illuminate/support` `^10.0|^11.0|^12.0`
+- `illuminate/http` `^10.0|^11.0|^12.0|^13.0`
+- `illuminate/support` `^10.0|^11.0|^12.0|^13.0`
+
+Laravel 13 is supported through Illuminate `^13.0`. Laravel 13 itself requires PHP 8.3+, so Composer will only resolve the Laravel 13 dependency set on PHP versions supported by Laravel 13.
 
 ## Installation
 
